@@ -18,16 +18,9 @@ import lombok.Setter;
 @AllArgsConstructor
 public class ProductEntity {
 
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "product_id_generator")
-    @SequenceGenerator(name =
-
-
-            "product_id_generator", sequenceName = "product_id_seq")
-
-
+    @SequenceGenerator(name = "product_id_generator", sequenceName = "product_id_seq")
     private Long id;
 
     @Column(nullable = false, unique = true)
