@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: product-service
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:15432/postgres}
+    username: ${SPRING_DATASOURCE_USERNAME:product_service_user}
+    password: ${SPRING_DATASOURCE_PASSWORD:123456}
+server:
+  port: 8081
+  shutdown: graceful
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  info:
+    git:
+      mode: full
+product:
+  page-size: 10
