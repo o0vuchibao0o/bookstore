@@ -3,7 +3,7 @@ spring:
     name: product-service
   datasource:
     url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:15432/postgres}
-    username: ${SPRING_DATASOURCE_USERNAME:product_service_user}
+    username: ${SPRING_DATASOURCE_USERNAME:my_root}
     password: ${SPRING_DATASOURCE_PASSWORD:123456}
 server:
   port: 8081

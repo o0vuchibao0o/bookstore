@@ -1,0 +1,4 @@
+package com.vuchibao.bookstore.order.domain.entity;
+
+class OrderEntity {
+}

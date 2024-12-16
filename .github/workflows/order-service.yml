@@ -1,9 +1,9 @@
-name: Product Service
+name: Order Service
 
 on:
   push:
     paths:
-      - services/product-service/**
+      - services/order-service/**
     branches:
       - "**"
 
@@ -12,12 +12,11 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     env:
-      DOCKER_IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/bookstore-product-service:latest
-      working-directory: ./services/product-service
+      DOCKER_IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/bookstore-order-service:latest
+      working-directory: ./services/order-service
     defaults:
       run:
         working-directory: ${{ env.working-directory }}
-
     steps:
       - uses: actions/checkout@v4
 
