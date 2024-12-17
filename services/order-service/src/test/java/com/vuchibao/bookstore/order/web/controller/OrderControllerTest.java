@@ -44,7 +44,7 @@ class OrderControllerTest extends AbstractIT {
                     .contentType(ContentType.JSON)
                     .body(payload)
                     .when()
-                    .post("/api.orders")
+                    .post("/api/orders")
                     .then()
                     .statusCode(HttpStatus.CREATED.value())
                     .body("orderNumber", Matchers.notNullValue());
@@ -58,7 +58,7 @@ class OrderControllerTest extends AbstractIT {
                 .contentType(ContentType.JSON)
                 .body(payload)
                 .when()
-                .post("/api.orders")
+                .post("/api/orders")
                 .then()
                 .statusCode(HttpStatus.BAD_REQUEST.value());
     }
